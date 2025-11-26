@@ -124,6 +124,7 @@
   background-image: url(../images/lotus.jpg);
   background-size: cover; 
   background-position: center; 
+}
 
 .overlay
 {
@@ -247,6 +248,7 @@
 {
   margin: 180px 50px 0px 50px;
   flex-shrink: 0; 
+}
 
 .lots_heading
 {
