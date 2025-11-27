@@ -1,455 +1,255 @@
-.header /*свойства класса*/
-{
-  margin: 92px 50px 92px 50px; /*размеры обьекта*/
-  display: grid; /*отображение в ячейки*/
-  grid-template-columns: 4fr 0.8fr 4fr; /*размеры ячейки*/
-  text-decoration-skip-ink: none; /*линия подчеркивания не прерывается*/
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    height: 293px;
+    margin: 0 50px 0 50px;
+    font-size: 18px;
 }
 
-.header_links-list
-{
-  display: flex; /*выстраивание по прямой оси по направлению слева направо*/
-  align-items: center; /*отображение по центру*/
+a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
-.header_links-list-main
-{
-  display: flex;
-  align-items: center;
-  gap: 30px; /*отступ между элементами*/
+.title {
+    margin-left: 40px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.menu {
+    padding-right: 36px;
 }
 
-.header_links-list-item
-{
-  display: list-item; /*отображение в виде списка*/
+.menu-list {
+    display: flex;
+    gap: 32px;
+    list-style: circle;
+
 }
 
-.header_links-list-item_no-bullit
-{
-  display: list-item;
+.item-main {
+    list-style: none;
 }
 
-.header_link_active
-{ 
-  color: black;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400; /*толщина написания шрифта*/
-  line-height: normal; /*высота шрифта*/
-}
-.header_link
-{
-  color: black;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+
+.button-main {
+    text-decoration: none;
 }
 
-.header_link
-{
-  display: list-item;
-  list-style-type: circle; /*разделение пунктов кружком*/
-  /*border-bottom: 1px solid black;*/
+.logo-black {
+    width: auto;
+    height: 105px;
 }
 
-.header_logo
-{
-  display: grid; 
-  align-content: start; /*расположение элементов вплотную друг к другу*/
-  width: 138px;
-  height: 105px;
+.contact-list {
+    width: 240px;
+    margin-left: 200px;
+    line-height: 25px;
+    list-style: none;
 }
 
-.header_logo-image
-{
-  display: block; /*отображение элемента блоком*/
-  align-content: start;
+.phone-number, .e-mail {
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
-.header_address
-{
-  display: flex;
-  align-items: center;
-  justify-content: end; /*отображение элемента в конце главной оси*/
+
+/* main */
+
+.welcome {
+    display: flex;
+    width: 1100px;
+    height: 757px;
+    background-image: url('/images/cover.jpg');
+    background-repeat: no-repeat;
+    background-position: 45%;
+    background-size: 130%;
 }
 
-.contacts-element
-{
-  width: 240px;
-  padding-right: 3px; /*отступ справа*/
-  display: flex;
-  flex-direction: column; /*отображение обьектов в колонну*/
-  align-items: flex-start; /*отображение элементов по верхнему краю контейнера*/
-  font-style: normal;
-  color: black;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23.6px;
+.welcome-content {
+    margin: 165px 50px 50px 50px;
 }
 
-.mail-address
-{
-  
-  display: flex;
-  align-self: flex-start;
-  /*border-bottom: 0.5px solid black;*/
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.phone-address
-{
-  
-  display: flex;
-  align-self: flex-start;
-  /*border-bottom: 0.5px solid black;*/
+.name {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 385px;
+    color: white;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 115px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    list-style: none;
 }
 
-.city-address-second
-{
-  display: flex;
+.you {
+    align-self: center;
+    margin-top: 20px;
 }
 
-.city-address-first
-{
-  display: flex;
+.need {
+    align-self: end;
+    margin-top: 20px;
 }
 
-.cover
-{
-  background-image: url(../images/lotus.jpg);
-  background-size: cover; /*увеличение изображения, чтобы полностью заполнить контейнер, который ему предназначен*/
-  background-position: center; /*отображение по центру*/
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 105px;
+    color: white;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
 }
 
-.overlay
-{
-  background-color: rgba(0, 0, 0, 0.6); /*черный цвет с прозрачностью 0.5*/
+.intro-text {
+    word-spacing: 20px;
 }
 
-.cover_title
-{
-  padding-top: 165px;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  text-transform: uppercase;
-  row-gap: 19px;
-  grid-template-areas: /*выравнивание слов в каждой строке*/
-    "start"
-    "center"
-    "end";
-}
-.aligned-text_right
-{
-  color: white;
-  font-family: Raleway, sans-serif;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 30px; /*расстояние между буквами*/
+.make-a-bid-button {
+    width: 256px;
+    height: 51px;
+    border: 1px solid white;
+    color: white;
+    font-style: bold;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    
 }
 
-.aligned-text_center
-{
-  color: white;
-  font-family: Raleway, sans-serif;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 30px;
+/* lots */
+
+.lots {
+    margin: 180px 24px 120px 24px;
 }
 
-.aligned-text
-{
-  color: white;
-  font-family: Raleway, sans-serif;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 30px;
+.see-more {
+    margin-left: 40px;
 }
 
-.aligned-text
-{
-  text-align: start;
-  grid-area: start; /*прижимание сетки к началу оси*/
-  line-height: 115%;
-  margin: 0px 50px;
+.lots-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 596px;
+    column-gap: 25px;
+    margin: 30px 0;
 }
 
-.aligned-text_center
-{
-  line-height: 100%;
-  text-align: center;
-  grid-area: center;
-  margin: 0px 95px 0px 65px;
-  justify-self: center;
+.lot-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 48px 40px;
+    color: white;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0em;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.aligned-text_right
-{
-  line-height: 70px;
-  text-align: end;
-  grid-area: end;
-  margin: 0px 50px 0px 50px;
+.lot-content p {
+    width: 254px;
 }
 
-.bet-button
-{
-  color: white;
-  text-align: center;
-  font-family: Raleway, sans-serif;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-  text-transform: uppercase;
+.lot-movie, .lot-book, .lot-picture {
+    background-position: 50%;
+    background-size: cover;
 }
 
-.cover_description
-{
-  display: flex;
-  justify-content: space-between; /*равномерное распределение элементов вдоль главной оси*/
-  margin: 105px 50px 0px 50px;
-  padding-bottom: 50px;
+.lot-movie {
+    background-image: url('/images/card-lot-01.jpg');
 }
 
-.cover_description-text
-{
-  color: white;
-  text-align: left;
-  font-family: Raleway, sans-serif;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-  text-transform: uppercase;
-  padding-left: 372px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  letter-spacing: 0px;
-  word-spacing: 17px; /*расстояние между словами*/
+.lot-book {
+    background-image: url('/images/card-lot-02.jpg');
 }
 
-.bet-button
-{
-  display: flex;
-  padding: 12px 32px;
-  border: 1px solid white;
-  background: none;
+.lot-picture {
+    background-image: url('/images/card-lot-03.jpg');
 }
 
-.lots
-{
-  margin: 180px 50px 0px 50px;
-  flex-shrink: 0; /*элемент не будет сжиматься при недостатке места в контейнере*/
+.lot-title {
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 
-.lots_heading
-{
-  margin-left: 40px; /*отступ обьекта от другого обьекта слева*/
-  margin-bottom: 27px;
-  color: black;
-  font-family: Raleway, sans-serif;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
+/* about */
+
+.about {
+    display: flex;
+    margin: 0 24px;
 }
 
-.lots_card-list
-{
-  display: flex;
-  list-style-type: none;
-  justify-content: space-between;
-  flex-wrap: wrap; /*перенос элемента на другую строку при недостатке места*/
+.logo-circle {
+    display: flex;
+    place-content: center;
+    width: 240px;
+    height: 240px;
+    margin-top: 35px;
+    border-radius: 100%;
+    background-color: black;
 }
 
-.card-link
-{
-  
-  display: block;
-  height: 100%;
+.logo-white {
+    width: 60%;
 }
 
-.card
-{
-  width: 430px;
-  min-height: 450px;
-  height: 100%;
-  padding: 50px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.about-content {
+    margin-left: 72px;
 }
 
-.card_type_film
-{
-  background-image: url(../images/scene.jpg);
-  background-size: cover;
+.about-title {
+    display: block;
+    margin: 0;
+    margin-top: 136px;
+    margin-bottom: 100px;
 }
 
-.card_type_book
-{
-  background-image: url(../images/book.jpg);
-  background-size: cover;
+.about-text {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 24px;
 }
 
-.card_type_picture
-{
-  background-image: url(../images/picture.jpg);
-  background-size: cover;
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 180px 50px 82px 50px;
 }
 
-.card_title
-{
-  color: white;
-  font-family: Raleway, sans-serif;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  text-decoration-line: underline;
-  text-transform: uppercase;
-  text-decoration-skip-ink: none; /*отображение сплошной линии*/
+footer .menu-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    list-style: none;
 }
 
-.card_text
-{
-  color: white;
-  font-family: Raleway, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  justify-content: space-around; /*заполнение элементами для отображения равной пустоты вокруг*/
+footer .contact-list {
+    margin-left: 0;
 }
 
-.lots_look-more-link
-{
-  color: black;
-  font-family: Raleway, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-top: 30px;
-  margin-left: 40px;
-  
+.socials {
+    display: flex;
+    gap: 48px;
+    list-style: none;
 }
 
-.lots_look-more-link-text
-{
-  
-  border-bottom: 1px solid black;
-}
-
-.about
-{
-  margin: 180px 50px 184px 50px;
-}
-
-.about_column
-{
-  display: grid;
-  grid-template-columns: 430px 1fr;
-}
-
-.about_logo
-{
-  display: flex;
-  width: 240px;
-  height: 240px;
-  border-radius: 120px;
-  background-color: black;
-  justify-self: center;
-}
-
-.about_logo-image
-{
-  display: grid;
-  width: 148px;
-  height: 114px;
-  align-self: center;
-  margin-left: 46px;
-}
-
-.about_title-and-text-wrapper
-{
-  margin: 101px 0px 0px 25px;
-  display: grid;
-  row-gap: 30px; /*расстояние между абзацами*/
-}
-
-.about_title
-{
-  color: black;
-  font-family: Raleway, sans-serif;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-  margin-bottom: 70px;
-}
-
-.about_text
-{
-  color: black;
-  font-family: Raleway, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23px;
-}
-
-footer
-{
-  margin: 0px 50px 90px 50px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer_menu
-{
-  display: grid;
-  align-content: start;
-  justify-items: center;
-  list-style-type: none; /*отключение маркеров элементов списка*/
-}
-
-.footer_menu-link
-{
-  display: grid;
-  align-self: center;
-  color: black;
-  text-align: center;
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration-skip-ink: none;
-}
-
-.footer_menu-link_active
-{
-  
-  border-bottom: none;
-}
-
-.footer_social-list
-{
-  list-style-type: none;
-  display: flex;
-  gap: 48px;
-}
-
-.footer_social-list-item-logo{
-  width: 48px;
+.socials-button {
+    width: 48px;
 }
